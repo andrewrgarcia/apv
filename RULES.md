@@ -9,7 +9,7 @@ Playable online: [https://apvgame.vercel.app](https://apvgame.vercel.app)
 
 Immobilize the opposing **Pivot (●)** — the command node —  
 so it has **no legal moves** and all six adjacent hexes are blocked or controlled.  
-No captures occur; victory arises from positional dominance.  
+No captures occur; victory arises purely from positional dominance.  
 If both Pivots are immobilized simultaneously, the game is a **draw**.
 
 ---
@@ -19,12 +19,13 @@ If both Pivots are immobilized simultaneously, the game is a **draw**.
 | Unit | Symbol | Count | Description |
 |------|---------|--------|-------------|
 | **Pivot** | ● | 1 | Command node; its immobilization ends the game. |
-| **Axis** | ▲ | 2 | Line-control unit; defines geometric constraints. |
-| **Veil** | ◆ | 2 | Jump unit; establishes tempo and reach. |
+| **Axis** | ▲ | 2 | Line-control unit; defines geometric containment lines. |
+| **Veil** | ◆ | 2 | Jump unit; establishes tempo and reach (two-step straight). |
+| **Turned Veil** | ■ | 2 | Angular jump unit; shifts through adjacent directions to disrupt linear control. |
 
 **Board:** Hexagonal grid of radius 4 (61 cells).  
-Coordinates use axial notation `(q, r)` with six directions:  
-`(+1, 0), (+1, −1), (0, −1), (−1, 0), (−1, +1), (0, +1)`.
+Coordinates use axial notation `(q,r)` with six directions:  
+`(+1,0) (+1,−1) (0,−1) (−1,0) (−1,+1) (0,+1)`.
 
 ---
 
@@ -33,14 +34,16 @@ Coordinates use axial notation `(q, r)` with six directions:
 ```
 
 Player A (North)
-Pivot ● at (0, +4)
-Axis ▲ at (−1, +3), (1, +3)
-Veil ◆ at (−1, +2), (1, +2)
+Pivot ● at (0,+4)
+Axis ▲ at (−1,+3), (1,+3)
+Veil ◆ at (−1,+2), (1,+2)
+Turned Veil ■ at (0,+3), (0,+2)
 
 Player B (South)
-Pivot ● at (0, −4)
-Axis ▲ at (−1, −3), (1, −3)
-Veil ◆ at (−1, −2), (1, −2)
+Pivot ● at (0,−4)
+Axis ▲ at (−1,−3), (1,−3)
+Veil ◆ at (−1,−2), (1,−2)
+Turned Veil ■ at (0,−3), (0,−2)
 
 ```
 
@@ -48,13 +51,13 @@ Veil ◆ at (−1, −2), (1, −2)
 
 ## 4. Turn Structure
 
-Each turn may include two phases:
+Each turn has two phases:
 
 1. **Primary Move** — perform one legal movement.  
 2. **Future Order (optional)** — assign a deferred action to another unit.
 
-Future Orders execute automatically at the start of that player’s next turn  
-if the destination remains unoccupied. Only one order may exist per player.
+A Future Order executes automatically at the start of that player’s next turn if the destination remains unoccupied.  
+Only one order may exist per player at any time.
 
 ---
 
@@ -70,6 +73,11 @@ if the destination remains unoccupied. Only one order may exist per player.
 
 ### Veil (◆)
 - Jumps exactly two hexes in any direction, ignoring the intervening one.  
+- Must land on an empty hex within the board.
+
+### Turned Veil (■)
+- Jumps along **two adjacent directions**, forming a 60° turn.  
+- Always lands on one of six mid-ring cells between the main axes.  
 - Must land on an empty hex within the board.
 
 ---
@@ -102,10 +110,10 @@ creating asymmetric openings under perfect information.
 |----------|-------------|-----------|
 | **Axis (▲)** | Initiative | Defines containment geometry |
 | **Pivot (●)** | Command | Balances centrality and defense |
-| **Veil (◆)** | Tempo | Executes jumps that shift phase advantage |
+| **Veil (◆)** | Tempo | Executes linear jumps for phase advantage |
+| **Turned Veil (■)** | Adaptability | Breaks line stagnation through angular flanking |
 
-The discipline lies in **temporal foresight** —  
-knowing when to act, when to delay, and when to commit.
+The discipline lies in **temporal foresight** — knowing when to act, when to delay, and when to commit.
 
 ---
 
