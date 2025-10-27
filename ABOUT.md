@@ -81,7 +81,7 @@ It challenges reasoning, not reflex — a minimalist experiment in strategic tho
 
 ## 7. Credits
 
-**Designer:** Dr. Andrew R. Garcia  
+**Designer:** Andrew R. Garcia, Ph.D
 Ph.D., Systems Engineer and Cognitive-AI Researcher  
 Developed 2025  
 

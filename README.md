@@ -62,7 +62,7 @@ and a study in strategic foresight.
 
 ## 🧩 Credits
 
-**Designer:** Dr. Andrew R. Garcia  
+**Designer:** Andrew R. Garcia, Ph.D
 Systems Engineer & AI Researcher  
 Developed 2025  
 

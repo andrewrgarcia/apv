@@ -119,7 +119,7 @@ The discipline lies in **temporal foresight** — knowing when to act, when to d
 
 ## 9. Credits
 
-**Designer:** Andrew R. Garcia  
+**Designer:** Andrew R. Garcia, Ph.D
 Systems Engineer & Cognitive-AI Researcher  
 Developed 2025  
 
